@@ -1,4 +1,4 @@
-import eq from '../eq'
+import eq from '../04-eq'
 
 // var caches = [['test1', 1],['test2',2],['test3',3]]
 
@@ -16,6 +16,7 @@ function assocIndexOf(array, key) {
   // length=10 --length=9 length=9
   // length=1 --length=0 length=0 不会进入循环 导致第一个元素不会判断
   while (length--) {
+    console.log(array[length][0], key)
     if (eq(array[length][0], key)) {
       return length
     }

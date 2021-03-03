@@ -1,5 +1,5 @@
 import assert from 'assert';
-import eq from '../src/eq.js';
+import eq from '../src/04-eq.js';
 
 describe('eq', function() {
   it('should perform a `SameValueZero` comparison of two values', function() {

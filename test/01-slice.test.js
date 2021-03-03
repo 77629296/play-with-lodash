@@ -1,7 +1,7 @@
 import assert from 'assert';
 import lodashStable from 'lodash';
 import { falsey, LARGE_ARRAY_SIZE } from './utils.js';
-import slice from '../src/slice.js';
+import slice from '../src/01-slice.js';
 
 describe('slice', function() {
   var array = [1, 2, 3];

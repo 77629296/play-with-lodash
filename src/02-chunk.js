@@ -1,4 +1,4 @@
-import slice from './slice.js'
+import slice from './01-slice.js'
 import toInteger from './toInteger.js'
 
 /**

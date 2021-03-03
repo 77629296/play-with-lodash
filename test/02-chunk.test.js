@@ -1,7 +1,7 @@
 import assert from 'assert';
 import lodashStable from 'lodash';
 import { falsey, stubArray } from './utils.js';
-import chunk from '../src/chunk.js';
+import chunk from '../src/02-chunk.js';
 
 describe('chunk', function() {
   var array = [0, 1, 2, 3, 4, 5];
