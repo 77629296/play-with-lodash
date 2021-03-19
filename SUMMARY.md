@@ -1,6 +1,6 @@
-# 说明
+# 写点什么
 
-* [说明](./README.md)
+* [写点什么](./README.md)
 
 ## Lodash源码
 

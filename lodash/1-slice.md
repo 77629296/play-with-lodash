@@ -1,131 +1,53 @@
-# 冒泡排序
+# slice
 
-冒泡排序（Bubble Sort）也是一种简单直观的排序算法。它重复地走访过要排序的数列，一次比较两个元素，如果他们的顺序错误就把他们交换过来。走访数列的工作是重复地进行直到没有再需要交换，也就是说该数列已经排序完成。这个算法的名字由来是因为越小的元素会经由交换慢慢“浮”到数列的顶端。
+截取数组元素,包含 start,不包含 end [start, end)
 
-作为最简单的排序算法之一，冒泡排序给我的感觉就像 Abandon 在单词书里出现的感觉一样，每次都在第一页第一位，所以最熟悉。冒泡排序还有一种优化算法，就是立一个 flag，当在一趟序列遍历中元素没有发生交换，则证明该序列已经有序。但这种改进对于提升性能来说并没有什么太大作用。
-
-
-## 1. 算法步骤
-
-1. 比较相邻的元素。如果第一个比第二个大，就交换他们两个。
-
-2. 对每一对相邻元素作同样的工作，从开始第一对到结尾的最后一对。这步做完后，最后的元素会是最大的数。
-
-3. 针对所有的元素重复以上的步骤，除了最后一个。
-
-4. 持续每次对越来越少的元素重复上面的步骤，直到没有任何一对数字需要比较。
-
-
-## 2. 动图演示
-
-![动图演示](res/bubbleSort.gif)
-
-
-## 3. 什么时候最快
-
-当输入的数据已经是正序时（都已经是正序了，我还要你冒泡排序有何用啊）。
-
-
-## 4. 什么时候最慢
-
-当输入的数据是反序时（写一个 for 循环反序输出数据不就行了，干嘛要用你冒泡排序呢，我是闲的吗）。
-
-
-## 5. JavaScript 代码实现
+## 1. 代码实现
 
 ```js
-function bubbleSort(arr) {
-    var len = arr.length;
-    for (var i = 0; i < len - 1; i++) {
-        for (var j = 0; j < len - 1 - i; j++) {
-            if (arr[j] > arr[j+1]) {        // 相邻元素两两对比
-                var temp = arr[j+1];        // 元素交换
-                arr[j+1] = arr[j];
-                arr[j] = temp;
-            }
-        }
-    }
-    return arr;
-}
-```
+function slice(array, start, end) {
+  let length = array === null ? 0 : array.length
+  if (!length) {
+    return []
+  }
+  // 默认值
+  start = start == null ? 0 : start
+  end = end == null ? length : end
 
+  /**
+   * 处理负值情况
+   * slice([1, 2, 3], -5) start=0
+   * 如果绝对值大于数组长度，从0开始
+   *
+   * slice([1, 2, 3], -1) start=2
+   * 如果绝对值小于等于数组长度，和数组长度相加
+   */
+  if (start < 0) {
+    start = -start > length ? 0 : length + start
+  }
 
+  // end最大为数组的长度
+  end = end > length ? length : end
 
-## 6. Python 代码实现
+  // end负值大于数组长度后面有控制 会和start比较
+  if (end < 0) {
+    end += length
+  }
 
-```python
-def bubbleSort(arr):
-    for i in range(1, len(arr)):
-        for j in range(0, len(arr)-i):
-            if arr[j] > arr[j+1]:
-                arr[j], arr[j + 1] = arr[j + 1], arr[j]
-    return arr
-```
+  // 新数组长度 正常为end-start >>> 是取整操作
+  length = start > end ? 0 : (end - start) >>> 0
+  start >>>= 0
 
-## 7. Go 代码实现
+  /**
+   * 从-1开始 因为while循环中为++index 此时index=0
+   * 能不能改为index=0 循环使用index++? 不行，因为index++后，index=1 result直接从1开始赋值了。。
+   */
+  let index = -1
+  const result = new Array(length)
+  while (++index < length) {
+    result[index] = array[index + start]
+  }
 
-```go
-func bubbleSort(arr []int) []int {
-	length := len(arr)
-	for i := 0; i < length; i++ {
-		for j := 0; j < length-1-i; j++ {
-			if arr[j] > arr[j+1] {
-				arr[j], arr[j+1] = arr[j+1], arr[j]
-			}
-		}
-	}
-	return arr
-}
-```
-
-## 8. Java 代码实现
-
-```java
-public class BubbleSort implements IArraySort {
-
-    @Override
-    public int[] sort(int[] sourceArray) throws Exception {
-        // 对 arr 进行拷贝，不改变参数内容
-        int[] arr = Arrays.copyOf(sourceArray, sourceArray.length);
-
-        for (int i = 1; i < arr.length; i++) {
-            // 设定一个标记，若为true，则表示此次循环没有进行交换，也就是待排序列已经有序，排序已经完成。
-            boolean flag = true;
-
-            for (int j = 0; j < arr.length - i; j++) {
-                if (arr[j] > arr[j + 1]) {
-                    int tmp = arr[j];
-                    arr[j] = arr[j + 1];
-                    arr[j + 1] = tmp;
-
-                    flag = false;
-                }
-            }
-
-            if (flag) {
-                break;
-            }
-        }
-        return arr;
-    }
-}
-```
-
-## 9. PHP 代码实现
-
-```php
-function bubbleSort($arr)
-{
-    $len = count($arr);
-    for ($i = 0; $i < $len - 1; $i++) {
-        for ($j = 0; $j < $len - 1 - $i; $j++) {
-            if ($arr[$j] > $arr[$j+1]) {
-                $tmp = $arr[$j];
-                $arr[$j] = $arr[$j+1];
-                $arr[$j+1] = $tmp;
-            }
-        }
-    }
-    return $arr;
+  return result
 }
 ```
