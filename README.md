@@ -1,3 +1,3 @@
-# play-with-lodash
+# 说明
 
-- lodash源码学习记录
+- 学习记录

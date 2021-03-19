@@ -1,11 +1,11 @@
-# Summary
+# 说明
 
-* [About](./README.md)
+* [说明](./README.md)
 
-## Chap01
+## Lodash源码
 
-* [1-1](./chap01/1-1.md)
+* [1-slice](./lodash/1-slice.md)
 
-## Chap02
+## 设计模式
 
-* [2-1](./chap02/2-1.md)
+* [1-1](./design/1-1.md)
