@@ -66,6 +66,14 @@
     },
     "bibtex-indexed-cite": {
       "path": "/"
+    },
+    "donate": {
+      "wechat": "https://77629296.github.io/play-with-lodash/wechat.png",
+      "alipay": "https://77629296.github.io/play-with-lodash/alipay.jpeg",
+      "title": "",
+      "button": "赏",
+      "alipayText": "支付宝打赏",
+      "wechatText": "微信打赏"
     }
   }
 }
