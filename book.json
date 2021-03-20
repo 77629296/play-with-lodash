@@ -1,12 +1,12 @@
 {
-  "title": "title",
-  "author": "",
+  "title": "mybook",
+  "language" : "zh-hans",
+  "author": "leeson",
   "plugins": [
     "-lunr",
     "-search",
     "search-pro",
     "-sharing",
-    "disqus",
     "github-buttons",
     "editlink",
     "ga",
@@ -19,9 +19,21 @@
     "todo",
     "copy-code-button",
     "expandable-chapters-small",
-    "donate"
+    "donate",
+    "hide-element",
+    "back-to-top-button",
+    "chapter-fold",
+    "pageview-count",
+    "favicon"
   ],
   "pluginsConfig": {
+    "hide-element": {
+      "elements": [".gitbook-link"]
+    },
+    "favicon": {
+      "shortcut": "gitbook.ico",
+      "bookmark": "gitbook.ico"
+    },
     "search-pro": {
       "cutWordLib": "nodejieba",
       "defineWord": ["Gitbook Use"]
@@ -29,17 +41,16 @@
     "anchor-navigation-ex": {
       "showLevel": false
     },
-    "disqus": {
-      "shortName": "https-77629296-github-io-play-with-lodash"
-    },
     "github-buttons": {
-      "buttons": [{
-        "user": "77629296",
-        "repo": "play-with-lodash",
-        "type": "star",
-        "size": "small",
-        "count": true
-      }]
+      "buttons": [
+        {
+          "user": "77629296",
+          "repo": "play-with-lodash",
+          "type": "star",
+          "size": "small",
+          "count": true
+        }
+      ]
     },
     "editlink": {
       "base": "https://github.com/77629296/play-with-lodash/blob/master",
@@ -47,16 +58,11 @@
       "multilingual": false
     },
     "ga": {
-      "token": "UA-131910384-3"
+      "token": ""
     },
     "prism": {
-      "ignore": [
-        "mermaid",
-        "eval-js"
-      ],
-      "css": [
-        "prismjs/themes/prism-tomorrow.css"
-      ]
+      "ignore": ["mermaid", "eval-js"],
+      "css": ["prismjs/themes/prism-tomorrow.css"]
     },
     "page-footer-ex": {
       "copyright": "By [leeson](https://github.com/77629296)",
