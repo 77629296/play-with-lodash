@@ -21,7 +21,6 @@
     "expandable-chapters-small",
     "donate",
     "hide-element",
-    "back-to-top-button",
     "chapter-fold",
     "pageview-count",
     "favicon"
@@ -31,8 +30,8 @@
       "elements": [".gitbook-link"]
     },
     "favicon": {
-      "shortcut": "gitbook.ico",
-      "bookmark": "gitbook.ico"
+      "shortcut": "/gitbook.ico",
+      "bookmark": "/gitbook.ico"
     },
     "search-pro": {
       "cutWordLib": "nodejieba",
