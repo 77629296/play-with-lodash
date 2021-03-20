@@ -55,7 +55,7 @@
         "eval-js"
       ],
       "css": [
-        "prismjs/themes/prism-material-dark.css"
+        "prismjs/themes/prism-tomorrow.css"
       ]
     },
     "page-footer-ex": {
