@@ -55,7 +55,7 @@
         "eval-js"
       ],
       "css": [
-        "prismjs/themes/prism-solarizedlight.css"
+        "prismjs/themes/prism-material-dark.css"
       ]
     },
     "page-footer-ex": {

@@ -1,6 +1,6 @@
-# 写点什么
+# 序言
 
-* [写点什么](./README.md)
+* [序言](./README.md)
 
 ## Lodash源码
 
