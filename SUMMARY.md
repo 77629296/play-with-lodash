@@ -5,6 +5,7 @@
 ## Lodash源码
 
 * [1-slice](./lodash/1-slice.md)
+* [2-chunk](./lodash/2-chunk.md)
 
 ## 设计模式
 
