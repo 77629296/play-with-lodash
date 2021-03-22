@@ -1,12 +1,8 @@
-# 序言
+# mybook
 
-* [序言](./README.md)
-
-## Lodash源码
-
-* [1-slice](./lodash/1-slice.md)
-* [2-chunk](./lodash/2-chunk.md)
-
-## 设计模式
-
-* [1-1](./design/1-1.md)
+- Design
+  * [1 1](design/1-1.md)
+- Lodash
+  * [1 Slice](lodash/1-slice.md)
+  * [2 Chunk](lodash/2-chunk.md)
+  * [3 Compact](lodash/3-compact.md)
