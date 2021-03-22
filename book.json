@@ -1,6 +1,6 @@
 {
   "title": "mybook",
-  "language" : "zh-hans",
+  "language": "zh-hans",
   "author": "leeson",
   "plugins": [
     "-lunr",
