@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sm": "book sm -i node_modules"
+    "sm": "book sm -i node_modules",
+    "start": "gitbook serve",
+    "install:plugin": "gitbook install"
   },
   "repository": {
     "type": "git",
@@ -21,6 +23,7 @@
   },
   "homepage": "https://github.com/77629296/play-with-lodash#readme",
   "devDependencies": {
+    "gitbook-cli": "^2.3.2",
     "gitbook-summary": "^1.2.2"
   }
 }
