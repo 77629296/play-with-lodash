@@ -1,6 +1,6 @@
 # assocIndexOf
 
-找出指定key 在二维数组中的索引值
+找出指定 key 在二维数组中的索引值
 
 ## 1. 代码实现
 
@@ -19,11 +19,12 @@ function assocIndexOf(array, key) {
    * length-- length
    * 2  1
    * 1  0
-   * 
-   * --length length
+   *
+   * 如果换成--length length
    * 1  1
    * 0  0 // 循环已结束 漏掉一次循环
-   */ 
+   */
+
   while (length--) {
     // 复用eq
     if (eq(array[length][0], key)) {

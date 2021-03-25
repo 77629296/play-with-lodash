@@ -5,7 +5,6 @@
 ## 1. 代码实现
 
 ```js
-
 /**
  * var array = [1, 2, false, 0, 3, undefined, 4]
  * compact(array) = [1, 2, 3, 4]

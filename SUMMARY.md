@@ -9,3 +9,4 @@
   * [4 Hash](lodash/4-Hash.md)
   * [5 Eq](lodash/5-eq.md)
   * [6 Assoc Index Of](lodash/6-assocIndexOf.md)
+  * [7 List Cache](lodash/7-ListCache.md)

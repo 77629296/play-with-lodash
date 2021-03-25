@@ -1,11 +1,10 @@
 # Hash
 
-接收1个二维数组作为参数，转为key/value的形式
+接收 1 个二维数组作为参数，转为 key/value 的形式
 
 ## 1. 代码实现
 
 ```js
-
 /**
  * var cache = new Hash([['test1', 1], ['test2', 2]])
  * cache.get('test1') // 1
@@ -21,7 +20,7 @@ class Hash {
 
     // 利用clear初始化属性
     this.clear()
-    while(++index < length) {
+    while (++index < length) {
       const entry = entires[index]
       this.set(entry[0], entry[1])
     }
