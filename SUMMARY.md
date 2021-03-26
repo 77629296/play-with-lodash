@@ -10,3 +10,4 @@
   * [5 Eq](lodash/5-eq.md)
   * [6 Assoc Index Of](lodash/6-assocIndexOf.md)
   * [7 List Cache](lodash/7-ListCache.md)
+  * [8 Map Cache](lodash/8-MapCache.md)
