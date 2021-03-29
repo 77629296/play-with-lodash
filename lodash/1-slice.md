@@ -6,7 +6,7 @@
 
 ```js
 function slice(array, start, end) {
-  let length = array === null ? 0 : array.length
+  let length = array == null ? 0 : array.length
   if (!length) {
     return []
   }
