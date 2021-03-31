@@ -2,6 +2,7 @@
   "title": "mybook",
   "language": "zh-hans",
   "author": "leeson",
+  "sortedBy": "-",
   "plugins": [
     "-lunr",
     "-search",
