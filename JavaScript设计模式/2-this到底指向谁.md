@@ -2,7 +2,7 @@
 
 ## 5 大定律
 
-### 1
+### Rule 1
 
 函数体中，**隐式**调用函数时，指向 window（nodejs 中是 global）。当然，严格模式下就是 undefined
 
@@ -18,7 +18,7 @@ implicitCall() // window
 implicitCallStrict() // undefined
 ```
 
-### 2
+### Rule 2
 
 通过 call/apply/bind **显式**调用函数时，this 指向指定参数的对象
 
@@ -32,7 +32,7 @@ fn.apply(target, ['arg1', 'arg2'])
 fn.bind(target, 'arg1', 'arg2')()
 ```
 
-### 3
+### Rule 3
 
 使用 **new** 方法调用构造函数时，构造函数内的 this 指向新创建的对象
 
@@ -44,7 +44,7 @@ const foo = new Foo()
 console.log(foo.name) // new method
 ```
 
-### 4
+### Rule 4
 
 通过**上下文对象**调用函数时，函数体内的 this 指向最后调用它的对象
 
@@ -66,7 +66,7 @@ const wrapperContextObject = {
 console.log(wrapperContextObject.contextObject.fun() === contextObject) // true
 ```
 
-### 5
+### Rule 5
 
 **箭头函数**中，this 的指向由外层作用域决定
 
