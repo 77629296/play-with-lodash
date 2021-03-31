@@ -1,0 +1,29 @@
+{
+  "name": "play-with-lodash",
+  "version": "1.0.0",
+  "description": "路已铺好，如何贡献，那是追求。",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sm": "book sm -i node_modules",
+    "start": "gitbook serve",
+    "install:plugin": "gitbook install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/77629296/play-with-lodash.git"
+  },
+  "keywords": [
+    "lodash"
+  ],
+  "author": "leeson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/77629296/play-with-lodash/issues"
+  },
+  "homepage": "https://github.com/77629296/play-with-lodash#readme",
+  "devDependencies": {
+    "gitbook-cli": "^2.3.2",
+    "gitbook-summary": "^1.2.2"
+  }
+}

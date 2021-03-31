@@ -1,0 +1,650 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Map Cache · mybook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="leeson">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-tomorrow.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-bibtex-indexed-cite/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-footer-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="9-SetCache.html" />
+    
+    
+    <link rel="prev" href="7-ListCache.html" />
+    
+
+    
+        <link rel="shortcut icon" href='../gitbook.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../gitbook.ico' type="image/x-icon">
+    
+    
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"77629296","repo":"play-with-lodash","type":"star","size":"small","count":true}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../JavaScript设计模式/">
+            
+                <a href="../JavaScript设计模式/">
+            
+                    
+                    JavaScript设计模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../JavaScript设计模式/1-面向对象.html">
+            
+                <a href="../JavaScript设计模式/1-面向对象.html">
+            
+                    
+                    面向对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../JavaScript设计模式/2-bind与apply实现.html">
+            
+                <a href="../JavaScript设计模式/2-bind与apply实现.html">
+            
+                    
+                    bind与apply实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../JavaScript设计模式/2-this到底指向谁.html">
+            
+                <a href="../JavaScript设计模式/2-this到底指向谁.html">
+            
+                    
+                    this到底指向谁
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Lodash
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="1-slice.html">
+            
+                <a href="1-slice.html">
+            
+                    
+                    Slice
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="2-chunk.html">
+            
+                <a href="2-chunk.html">
+            
+                    
+                    Chunk
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="3-compact.html">
+            
+                <a href="3-compact.html">
+            
+                    
+                    Compact
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="4-Hash.html">
+            
+                <a href="4-Hash.html">
+            
+                    
+                    Hash
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="5-eq.html">
+            
+                <a href="5-eq.html">
+            
+                    
+                    Eq
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="6-assocIndexOf.html">
+            
+                <a href="6-assocIndexOf.html">
+            
+                    
+                    Assoc Index Of
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="7-ListCache.html">
+            
+                <a href="7-ListCache.html">
+            
+                    
+                    List Cache
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.8" data-path="8-MapCache.html">
+            
+                <a href="8-MapCache.html">
+            
+                    
+                    Map Cache
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="9-SetCache.html">
+            
+                <a href="9-SetCache.html">
+            
+                    
+                    Set Cache
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="10-baseFindIndex.html">
+            
+                <a href="10-baseFindIndex.html">
+            
+                    
+                    Base Find Index
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="11-strictIndexOf.html">
+            
+                <a href="11-strictIndexOf.html">
+            
+                    
+                    Strict Index Of
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    其他
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../其他/1-sula模式学习.html">
+            
+                <a href="../其他/1-sula模式学习.html">
+            
+                    
+                    sula模式学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Map Cache</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#mapcache"><b></b>MapCache</a></li><ul><li><span class="title-icon "></span><a href="#1&#x8981;&#x70B9;"><b></b>1.&#x8981;&#x70B9;</a></li><li><span class="title-icon "></span><a href="#2-&#x4EE3;&#x7801;&#x5B9E;&#x73B0;"><b></b>2. &#x4EE3;&#x7801;&#x5B9E;&#x73B0;</a></li></ul></ul></div><a href="#mapcache" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="mapcache"><a name="mapcache" class="anchor-navigation-ex-anchor" href="#mapcache"><i class="fa fa-link" aria-hidden="true"></i></a>MapCache</h1>
+<p>&#x4E4B;&#x524D;&#x4ECB;&#x7ECD;&#x4E86; Hash &#x548C; MapCache &#x65B9;&#x6CD5;&#xFF0C;Hash &#x5229;&#x7528;&#x4E86; js &#x5BF9;&#x8C61;&#x7684; key&#xFF0C;value &#x4F5C;&#x4E3A;&#x7F13;&#x5B58;&#xFF0C;MapCache &#x5219;&#x5904;&#x7406;&#x4E86; js &#x5BF9;&#x8C61;&#x4E0D;&#x652F;&#x6301;&#x7684; key &#x65F6;&#x7684;&#x60C5;&#x51B5;&#x3002;
+&#x5982;&#x679C;&#x8BA9;&#x7528;&#x6237;&#x81EA;&#x884C;&#x6765;&#x533A;&#x5206;&#x4F7F;&#x7528;&#xFF0C;&#x6210;&#x672C;&#x6BD4;&#x8F83;&#x9AD8;&#xFF0C;&#x5982;&#x679C;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x901A;&#x7528;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x6839;&#x636E;&#x7528;&#x6237;&#x8981;&#x7F13;&#x5B58;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x81EA;&#x884C;&#x51B3;&#x5B9A;&#x4F7F;&#x7528;&#x54EA;&#x79CD;&#x65B9;&#x6848;&#x4E0D;&#x662F;&#x66F4;&#x53CB;&#x597D;&#x5417;&#xFF1F;&#x5B83;&#x6765;&#x4E86;&#xFF0C;MapCache &#x7684;&#x5DE5;&#x4F5C;&#x5C31;&#x662F;&#x8FD9;&#x4E2A;</p>
+<h2 id="1&#x8981;&#x70B9;"><a name="1&#x8981;&#x70B9;" class="anchor-navigation-ex-anchor" href="#1&#x8981;&#x70B9;"><i class="fa fa-link" aria-hidden="true"></i></a>1.&#x8981;&#x70B9;</h2>
+<p>&#x4EE3;&#x7801;&#x5B9E;&#x73B0;&#x548C;&#x4E4B;&#x524D;&#x7684;Hash/MapCache&#x7C7B;&#x4F3C;&#xFF0C;&#x7B2C;&#x4E00;&#x6B21;&#x770B;&#x65F6;&#xFF0C;&#x6BD4;&#x8F83;&#x8FF7;&#x60D1;&#x7684;&#x4E00;&#x70B9;&#x662F;&#xFF0C;&#x5F53;&#x53EF;&#x4F5C;&#x4E3A;&#x5BF9;&#x8C61;key&#x65F6;&#xFF0C;&#x53C8;&#x5355;&#x72EC;&#x533A;&#x5206;&#x4E86;key&#x7C7B;&#x578B;&#x4E3A;string&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x5176;&#x4ED6;&#x5219;&#x5B58;&#x5230;&#x4E86;hash&#x4E0B;&#xFF0C;&#x8FD9;&#x662F;&#x4E3A;&#x4EC0;&#x4E48;&#x5462;&#xFF1F;&#x7ECF;&#x8FC7;&#x67E5;&#x9605;&#x8D44;&#x6599;&#xFF0C;&#x5F97;&#x51FA;&#x4EE5;&#x4E0B;&#x7ED3;&#x8BBA;</p>
+<ol>
+<li>&#x5BF9;&#x8C61;&#x7684;key&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x662F;Symbol&#x7C7B;&#x578B;&#x65F6;&#xFF0C;&#x4F1A;&#x8F6C;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&#x5F62;&#x5F0F;</li>
+<li>&#x5982;&#x679C;&#x7F13;&#x5B58;&#x7684;&#x6570;&#x636E;&#x4E2D;&#x5B58;&#x5728;&#x6570;&#x5B57;1&#x548C;&#x5B57;&#x7B26;&#x4E32;&apos;1&apos;&#xFF0C;&#x90A3;&#x4E48;&#x53EA;&#x4F1A;&#x5B58;&#x50A8;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;1&#xFF0C;&#x8FD9;&#x5C31;&#x662F;&#x95EE;&#x9898;&#x6240;&#x5728;&#x4E86;</li>
+</ol>
+<h2 id="2-&#x4EE3;&#x7801;&#x5B9E;&#x73B0;"><a name="2-&#x4EE3;&#x7801;&#x5B9E;&#x73B0;" class="anchor-navigation-ex-anchor" href="#2-&#x4EE3;&#x7801;&#x5B9E;&#x73B0;"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x4EE3;&#x7801;&#x5B9E;&#x73B0;</h2>
+<pre class="language-"><code class="lang-js"><span class="token keyword">import</span> Hash <span class="token keyword">from</span> <span class="token string">&apos;./4-Hash&apos;</span>
+<span class="token keyword">import</span> ListCache <span class="token keyword">from</span> <span class="token string">&apos;./7-ListCache&apos;</span>
+<span class="token comment">/**
+ * new MapCache([
+ *   [&apos;key&apos;, &apos;value&apos;],
+ *   [{key: &apos;An Object Key&apos;}, 1],
+ *   [Symbol(),2]
+ * ])
+ * &#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#xFF1A;{
+ *   size: 3,
+ *   __data__: {&#xCF;
+ *     string: {...},
+ *     hash: {...},
+ *     map: {...}
+ *   }
+ * }
+ */</span>
+
+<span class="token comment">// &#x662F;&#x5426;&#x53EF;&#x4F5C;&#x4E3A;&#x5BF9;&#x8C61;&#x7684;key</span>
+<span class="token keyword">function</span> <span class="token function">isKeyable</span><span class="token punctuation">(</span><span class="token parameter">value</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> type <span class="token operator">=</span> <span class="token keyword">typeof</span> value
+  <span class="token keyword">return</span> type <span class="token operator">==</span> <span class="token string">&apos;string&apos;</span> <span class="token operator">||</span>
+    type <span class="token operator">==</span> <span class="token string">&apos;number&apos;</span> <span class="token operator">||</span>
+    type <span class="token operator">==</span> <span class="token string">&apos;symbol&apos;</span> <span class="token operator">||</span>
+    type <span class="token operator">==</span> <span class="token string">&apos;boolean&apos;</span>
+    <span class="token operator">?</span> value <span class="token operator">!==</span> <span class="token string">&apos;__proto__&apos;</span>
+    <span class="token operator">:</span> value <span class="token operator">===</span> <span class="token keyword">null</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">getMapData</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> __data__ <span class="token punctuation">}</span><span class="token punctuation">,</span> key</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> data <span class="token operator">=</span> __data__
+  <span class="token comment">// &#x6839;&#x636E;&#x662F;&#x5426;&#x53EF;&#x7528;&#x4F5C;key &#x533A;&#x5206;&#x4F7F;&#x7528;map</span>
+  <span class="token keyword">return</span> <span class="token function">isKeyable</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span>
+    <span class="token operator">?</span> <span class="token comment">// &#x53EF;&#x7528;&#x4F5C;key&#x65F6; string&#x5355;&#x72EC;&#x5206;&#x4E3A;1&#x7C7B;</span>
+      data<span class="token punctuation">[</span><span class="token keyword">typeof</span> key <span class="token operator">==</span> <span class="token string">&apos;string&apos;</span> <span class="token operator">?</span> <span class="token string">&apos;string&apos;</span> <span class="token operator">:</span> <span class="token string">&apos;hash&apos;</span><span class="token punctuation">]</span>
+    <span class="token operator">:</span> data<span class="token punctuation">.</span>map
+<span class="token punctuation">}</span>
+
+<span class="token keyword">class</span> <span class="token class-name">MapCache</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">entries</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> index <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span>
+    <span class="token keyword">const</span> length <span class="token operator">=</span> entries <span class="token operator">==</span> <span class="token keyword">null</span> <span class="token operator">?</span> <span class="token number">0</span> <span class="token operator">:</span> entries<span class="token punctuation">.</span>length
+
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token operator">++</span>index <span class="token operator">&lt;</span> length<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> entry <span class="token operator">=</span> entries<span class="token punctuation">[</span>index<span class="token punctuation">]</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span>entry<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> entry<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>size <span class="token operator">=</span> <span class="token number">0</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>__data__ <span class="token operator">=</span> <span class="token punctuation">{</span>
+      hash<span class="token operator">:</span> <span class="token keyword">new</span> <span class="token class-name">Hash</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      map<span class="token operator">:</span> <span class="token keyword">new</span> <span class="token punctuation">(</span>Map <span class="token operator">||</span> ListCache<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      string<span class="token operator">:</span> <span class="token keyword">new</span> <span class="token class-name">Hash</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">delete</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> result <span class="token operator">=</span> <span class="token function">getMapData</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> key<span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token string">&apos;delete&apos;</span><span class="token punctuation">]</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>size <span class="token operator">-=</span> result <span class="token operator">?</span> <span class="token number">1</span> <span class="token operator">:</span> <span class="token number">0</span>
+    <span class="token keyword">return</span> result
+  <span class="token punctuation">}</span>
+
+  <span class="token function">get</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token function">getMapData</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> key<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">has</span><span class="token punctuation">(</span><span class="token parameter">key</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token function">getMapData</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> key<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">has</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">set</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span> value<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> data <span class="token operator">=</span> <span class="token function">getMapData</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> key<span class="token punctuation">)</span>
+    <span class="token keyword">const</span> size <span class="token operator">=</span> data<span class="token punctuation">.</span>size
+
+    data<span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span> value<span class="token punctuation">)</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>size <span class="token operator">+=</span> data<span class="token punctuation">.</span>size <span class="token operator">==</span> size <span class="token operator">?</span> <span class="token number">0</span> <span class="token operator">:</span> <span class="token number">1</span>
+    <span class="token keyword">return</span> <span class="token keyword">this</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> MapCache
+</code></pre>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> By <a href="https://github.com/77629296" target="_blank">leeson</a> </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> &#x6B64;&#x9875;&#x9762;&#x4FEE;&#x8BA2;&#x4E8E;&#xFF1A; 2021-03-31 15:14:31 </span> </footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="7-ListCache.html" class="navigation navigation-prev " aria-label="Previous page: List Cache">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="9-SetCache.html" class="navigation navigation-next " aria-label="Next page: Set Cache">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Map Cache","level":"1.3.8","depth":2,"next":{"title":"Set Cache","level":"1.3.9","depth":2,"path":"lodash/9-SetCache.md","ref":"lodash/9-SetCache.md","articles":[]},"previous":{"title":"List Cache","level":"1.3.7","depth":2,"path":"lodash/7-ListCache.md","ref":"lodash/7-ListCache.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","-sharing","github-buttons","editlink","ga","-highlight","prism","bibtex-indexed-cite","anchor-navigation-ex","page-footer-ex","splitter","todo","copy-code-button","expandable-chapters-small","donate","hide-element","chapter-fold","favicon"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"ignore":["mermaid","eval-js"],"css":["prismjs/themes/prism-tomorrow.css"]},"editlink":{"label":"Edit","multilingual":false,"base":"https://github.com/77629296/play-with-lodash/blob/master"},"todo":{},"page-footer-ex":{"copyright":"By [leeson](https://github.com/77629296)","markdown":true,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"此页面修订于："},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["Gitbook Use"]},"donate":{"alipay":"https://77629296.github.io/play-with-lodash/alipay.jpeg","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"https://77629296.github.io/play-with-lodash/wechat.png","wechatText":"微信打赏"},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"/gitbook.ico","bookmark":"/gitbook.ico"},"bibtex-indexed-cite":{"path":"/"},"github-buttons":{"buttons":[{"user":"77629296","repo":"play-with-lodash","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"copy-code-button":{},"ga":{"configuration":"auto","token":""},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"leeson","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"bibCount":0,"sortedBy":"-","variables":{},"title":"mybook","language":"zh-hans","bib":[],"gitbook":"*"},"file":{"path":"lodash/8-MapCache.md","mtime":"2021-03-31T15:14:31.829Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-03-31T15:16:05.113Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-editlink/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
