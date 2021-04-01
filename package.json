@@ -1,29 +1,42 @@
 {
-  "name": "play-with-lodash",
+  "private": true,
+  "name": "blog",
   "version": "1.0.0",
-  "description": "路已铺好，如何贡献，那是追求。",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "sm": "book sm -i node_modules",
-    "start": "gitbook serve",
-    "install:plugin": "gitbook install"
+    "start": "dumi dev",
+    "docs:build": "dumi build",
+    "docs:deploy": "gh-pages -d docs-dist",
+    "build": "father-build",
+    "deploy": "npm run docs:build && npm run docs:deploy",
+    "release": "npm run build && npm publish",
+    "prettier": "prettier --write \"**/*.{js,jsx,tsx,ts,less,md,json}\"",
+    "test": "umi-test",
+    "test:coverage": "umi-test --coverage"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/77629296/play-with-lodash.git"
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "typings": "dist/index.d.ts",
+  "gitHooks": {
+    "pre-commit": "lint-staged"
   },
-  "keywords": [
-    "lodash"
-  ],
-  "author": "leeson",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/77629296/play-with-lodash/issues"
+  "lint-staged": {
+    "*.{js,jsx,less,md,json}": [
+      "prettier --write"
+    ],
+    "*.ts?(x)": [
+      "prettier --parser=typescript --write"
+    ]
   },
-  "homepage": "https://github.com/77629296/play-with-lodash#readme",
+  "dependencies": {
+    "react": "^16.12.0"
+  },
   "devDependencies": {
-    "gitbook-cli": "^2.3.2",
-    "gitbook-summary": "^1.2.2"
+    "@umijs/test": "^3.0.5",
+    "dumi": "^1.0.13",
+    "father-build": "^1.17.2",
+    "gh-pages": "^3.1.0",
+    "lint-staged": "^10.0.7",
+    "prettier": "^1.19.1",
+    "yorkie": "^2.0.0"
   }
 }
